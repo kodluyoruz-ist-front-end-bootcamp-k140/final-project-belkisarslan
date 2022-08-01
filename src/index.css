@@ -5,9 +5,41 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+  background: url(https://picsum.photos/id/119/800/500?blur=3) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  object-fit: cover;
 
+  
+}
+ 
+ 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.table {
+  margin: 20px;
+  
+  
+}
+
+/* .today {
+  background-color: red;
+  color: #fff;
+} */
+
+.in-prev-month,
+.in-next-month {
+  opacity: 0.5;
+}
+
+.select{
+  border-radius: 5px;
+}
+.select-red{
+  background-color: red;
 }
