@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-
+import { Select } from './select';
 import useCalendar from '../useCalendar'
 
 const Calendar = () => {
@@ -29,27 +29,12 @@ const Calendar = () => {
                                 {cols.map(col => (
                                     col.date === todayFormatted
                                         ? <td key={col.date} className={`${col.classes} today`} onClick={() => dateClickHandler(col.date)}>
-                                            {col.value}<br/>
-                                            <select style={{backgroundColor: ""}} className="select" id="floatingSelect" >
-                                                <option select="true">Çalışma süresi</option>
-                                                <option defaultValue="1">1 Saat</option>
-                                                <option defaultValue="2">2 Saat</option>
-                                                <option defaultValue="3">3 Saat</option>
-                                                <option defaultValue="4">4 Saat</option>
-                                                <option defaultValue="5">6 Saat</option>
-                                                <option defaultValue="7">7 Saat</option>
-                                            </select>
+                                            {col.value}
+                                            <br/><Select/>
                                         </td>
-                                        : <td key={col.date} className={col.classes} onClick={() => dateClickHandler(col.date)}>{col.value}<br/>
-                                        <select className="select" id="floatingSelect" >
-                                            <option select="true">Çalışma süresi</option>
-                                            <option defaultValue="1">1 Saat</option>
-                                            <option defaultValue="2">2 Saat</option>
-                                            <option defaultValue="3">3 Saat</option>
-                                            <option defaultValue="4">4 Saat</option>
-                                            <option defaultValue="5">6 Saat</option>
-                                            <option defaultValue="7">7 Saat</option>
-                                        </select></td>
+                                        : <td key={col.date} className={col.classes} onClick={() => dateClickHandler(col.date)}>{col.value}
+                                        <br/><Select/>
+                                        </td>
                                         
                                 ))}
                             </tr>

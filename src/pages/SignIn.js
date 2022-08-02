@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom"
 import "../index.css"
 import { useSelector, useDispatch } from "react-redux"
 import { changeEmail, changePassword, logIn } from "../redux/authSlice"
+import { Info } from "../components/info"
 
 export default function SignIn() {
 
@@ -44,6 +45,7 @@ export default function SignIn() {
                 </div>
                 <p className="card-text text-center"><NavLink className="nav-link-primary" aria-current="page" to="/up">Hesabın yoksa şimdi kaydol</NavLink></p>
             </form>
+            <Info/>
         </>
     )
 }
