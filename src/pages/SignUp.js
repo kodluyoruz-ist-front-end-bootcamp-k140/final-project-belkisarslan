@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux"
 import { changeName, changeEmail, changePassword, register } from "../redux/authSlice"
 import "../index.css"
+import { Header } from "../components/header"
 
 export default function SignUp(){
 
@@ -28,6 +29,7 @@ export default function SignUp(){
     }
     return(
         <>
+           <Header/>
             <form onSubmit={handleSubmit}>
             <div className="mt-3 container text-center">
             {error &&(

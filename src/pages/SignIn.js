@@ -3,6 +3,9 @@ import "../index.css"
 import { useSelector, useDispatch } from "react-redux"
 import { changeEmail, changePassword, logIn } from "../redux/authSlice"
 import { Info } from "../components/info"
+import { Header } from "../components/header"
+import { Detail } from "../components/detail"
+import { Card } from "../components/card"
 
 export default function SignIn() {
 
@@ -27,6 +30,7 @@ export default function SignIn() {
 
     return (
         <>
+        <Header/>
             <form onSubmit={handleSubmit}>
                 <div className="mt-3 container text-center">
                 {error &&(
@@ -46,6 +50,8 @@ export default function SignIn() {
                 <p className="card-text text-center"><NavLink className="nav-link-primary" aria-current="page" to="/up">Hesabın yoksa şimdi kaydol</NavLink></p>
             </form>
             <Info/>
+            <Card/>
+            <Detail/>
         </>
     )
 }

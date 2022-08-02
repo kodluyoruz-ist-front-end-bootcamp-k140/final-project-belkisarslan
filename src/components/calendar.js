@@ -45,8 +45,9 @@ const Calendar = () => {
                 </tbody>
             </table>
 
-            <button className="button mx-2 float-end btn btn-secondary" onClick={getPrevMonth}>Prev</button>
-            <button className="button mx-2 float-end btn btn-secondary" onClick={getNextMonth}>Next</button>
+            
+            <button className="button mx-2 float-end btn btn-secondary" onClick={getNextMonth}>Sonraki</button>
+            <button className="button mx-2 float-end btn btn-secondary" onClick={getPrevMonth}>Önceki</button>
         </Fragment>
     );
 }
