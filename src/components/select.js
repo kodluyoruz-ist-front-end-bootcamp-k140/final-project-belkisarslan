@@ -2,17 +2,28 @@ import React from 'react'
 import "../index.css"
 
 export class Select extends React.Component {
-    state = {
-        option: "bg-light"
-    }
+  state = {
+    option: " "
+}
 
-    handleOptionsChange = (event) => {
-        this.setState({
-          option: event.target.value
-        });
-      }
+handleOptionsChange = (event) => {
+  this.setState({
+  option: event.target.value
+ });
+}
+
+componentDidMount() {
+ 
   
-    render() {
+}
+componentDidUpdate(){
+ const item = this.state.option
+ console.log(item)
+  
+  
+}
+  
+  render() {
     return (
         <select className={this.state.option} onChange={this.handleOptionsChange}>
         <option select="true">Çalışma süresi</option>

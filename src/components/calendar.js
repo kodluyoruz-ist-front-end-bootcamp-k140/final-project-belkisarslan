@@ -5,9 +5,7 @@ import useCalendar from '../useCalendar'
 const Calendar = () => {
     const { calendarRows, selectedDate, todayFormatted, daysShort, monthNames, getNextMonth, getPrevMonth } = useCalendar();
 
-    const dateClickHandler = date => {
-        console.log(date);
-    }
+   
 
     return (
         <Fragment>
@@ -28,11 +26,11 @@ const Calendar = () => {
                                
                                 {cols.map(col => (
                                     col.date === todayFormatted
-                                        ? <td key={col.date} className={`${col.classes} today`} onClick={() => dateClickHandler(col.date)}>
+                                        ? <td key={col.date} className={`${col.classes} today`}>
                                             {col.value}
                                             <br/><Select/>
                                         </td>
-                                        : <td key={col.date} className={col.classes} onClick={() => dateClickHandler(col.date)}>{col.value}
+                                        : <td key={col.date} className={col.classes} >{col.value}
                                         <br/><Select/>
                                         </td>
                                         
