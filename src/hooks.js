@@ -9,7 +9,7 @@ export const useIsLoggedIn = () => {
     
      onAuthStateChanged(auth, (user) => {
         //user gelirse true olacak gelmezse null olacak
-        console.log(user)
+        //console.log(user)
         setIsLoggedIn(!!user)
      })
     },[])

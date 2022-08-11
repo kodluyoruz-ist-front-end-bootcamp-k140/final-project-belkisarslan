@@ -3,7 +3,7 @@ import "../index.css"
 
 export class Select extends React.Component {
   state = {
-    option: " "
+    option: "bg-light"
 }
 
 handleOptionsChange = (event) => {
@@ -12,16 +12,13 @@ handleOptionsChange = (event) => {
  });
 }
 
-componentDidMount() {
- 
+ componentDidUpdate(){
+  const item = this.state.option
+  console.log(item)
   
-}
-componentDidUpdate(){
- const item = this.state.option
- console.log(item)
-  
-  
-}
+ }
+
+
   
   render() {
     return (
