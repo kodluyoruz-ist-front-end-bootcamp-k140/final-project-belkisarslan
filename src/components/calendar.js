@@ -28,10 +28,10 @@ const Calendar = () => {
                                     col.date === todayFormatted
                                         ? <td key={col.date} className={`${col.classes} today`}>
                                             {col.value}
-                                            <br/><Select/>
+                                            <br/><Select name={col.date}/>
                                         </td>
                                         : <td key={col.date} className={col.classes} >{col.value}
-                                        <br/><Select/>
+                                        <br/><Select name={col.date}/>
                                         </td>
                                         
                                 ))}

@@ -1,9 +1,11 @@
 import React from 'react'
 import "../index.css"
 
+
 export class Select extends React.Component {
   state = {
-    option: "bg-light"
+    option: "",
+    id: ""
 }
 
 handleOptionsChange = (event) => {
@@ -12,18 +14,25 @@ handleOptionsChange = (event) => {
  });
 }
 
- componentDidUpdate(){
-  const item = this.state.option
-  console.log(item)
+componentDidMount() {
   
- }
+  const json = localStorage.getItem(this.props.name)
+  const option = JSON.parse(json)
+  this.setState(() => ({ option }))
 
-
+}
+componentDidUpdate(){
+  const selectDay = this.props.name
+  const json = JSON.stringify(this.state.option)
+  localStorage.setItem(selectDay, json)
+  console.log(selectDay, json)
+}
   
   render() {
     return (
-        <select className={this.state.option} onChange={this.handleOptionsChange}>
-        <option select="true">Çalışma süresi</option>
+        <select id={this.props.name} className={this.state.option} onChange={this.handleOptionsChange}>
+
+        <option>Çalışma rengi</option>
         <option className="opt" value='bg-1'>1 Saat</option>
         <option className="opt" value='bg-2'>2 Saat</option>
         <option className="opt" value='bg-3'>3 Saat</option>
